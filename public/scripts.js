@@ -89,6 +89,14 @@ const stopLoading = () => {
     }
 };
 
+const getNoResults = () => {
+    return `
+    <div class="mdc-card content-card">
+        <p class="mdc-typography--headline4">No posts</p>
+        <p class="mdc-typography--body1">Create some or check back later for new blog posts!</p>
+    </div>`
+};
+
 const getPosts = () => {
     axios.get('/api/post').then(data => {
         stopLoading();
@@ -131,12 +139,12 @@ const getPosts = () => {
                 ${comments.join('')}
                 ${loggedIn ? actions : ''}
             </div>
-            ;`
+            `;
         });
 
         container.innerHTML = `
         ${loggedIn ? addButton : ''}
-        ${posts.join('')}
+        ${posts.length ? posts.join('') : getNoResults()}
         `;
     }).catch(error => {
         console.error('Unable to get posts', error);
@@ -181,10 +189,10 @@ const getMyPosts = () => {
                 ${comments.join('')}
                 ${actions}
             </div>
-            ;`
+            `;
         });
 
-        container.innerHTML = posts.join('');
+        container.innerHTML = posts.length ? posts.join('') : getNoResults();
     }).catch(error => {
         console.error('Unable to get posts', error);
         stopLoading();
