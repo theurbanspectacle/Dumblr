@@ -1,2 +1,2 @@
-# Dumblr
-Blogging for devs! Wow.
+# The Wording
+A simple blogging app! 

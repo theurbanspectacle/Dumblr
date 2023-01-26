@@ -1,0 +1,82 @@
+body {
+  height: 100vh;
+  flex-direction: column;
+  background: #262626;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  overflow-y: auto;
+}
+  
+progress {
+  width: 5em;
+  height: 5em;
+  margin: 2em auto;
+  display: block;
+  background: url("data:image/svg+xml,%3csvg viewBox='-5 -5 10 10' xmlns='http://www.w3.org/2000/svg'%3e%3cstyle%3esvg%7banimation:r 1.4s linear infinite%7d%40keyframes r%7bto%7btransform:rotate(270deg)%7d%7dcircle%7banimation:d 1.4s ease-in-out infinite%7d%40keyframes d%7b50%25%7btransform:rotate(135deg)%3bstroke-dashoffset:8%7dto%7btransform:rotate(450deg)%7dfrom%2cto%7bstroke-dashoffset:28%7d%7d%3c/style%3e%3ccircle fill='none' stroke-dasharray='30' stroke-dashoffset='8' stroke='%236200ee' r='4'/%3e%3c/svg%3e"); 
+}
+  
+/* Remove default browser styles */
+progress { border: 0 }
+progress::-moz-progress-bar { background: none }
+progress::-webkit-progress-bar { display: none }
+progress::-ms-fill { animation-name: none }
+
+.login-wrapping {
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.login-wrapping .mdc-button {
+  margin: 1rem 0;
+  display: inline-block;
+}
+
+.login-wrapping .mdc-text-field {
+  margin: 1rem 0;
+}
+
+.main-content-wrapper {
+  margin: 2rem;
+}
+
+.primary-action {
+  margin-bottom: 2rem;
+}
+
+.content-card {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.content-card p {
+  margin-bottom: 1rem;
+}
+
+.comment-card {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mdc-fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 100;
+}
+
+.mdc-dialog__content {
+  padding-top: 2rem !important;
+}
+
+.mdc-dialog__content .mdc-text-field {
+  margin-bottom: 1rem;
+  width: 100%;
+}

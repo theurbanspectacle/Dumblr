@@ -1,0 +1,6 @@
+-- DROP DATABASE
+DROP DATABASE IF EXISTS the_wording_db;
+
+-- CREATE DATABASE
+CREATE DATABASE the_wording_db;
+

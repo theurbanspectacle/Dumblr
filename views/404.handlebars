@@ -1,0 +1,22 @@
+<div class="mdc-banner mdc-banner--centered" role="banner" id="error-banner">
+  <div class="mdc-banner__content"
+       role="alertdialog"
+       aria-live="assertive">
+    <div class="mdc-banner__graphic-text-wrapper">
+      <div class="mdc-banner__text">
+        <p class="mdc-typography--headline4">404: Page Not Found.</p>
+        <p class="mdc-typography--body2">The page you requested was not found. Try going to the Home page.</p>
+      </div>
+    </div>
+    <div class="mdc-banner__actions">
+      <button type="button" class="mdc-button mdc-banner__primary-action" onclick="navHome()">
+        <div class="mdc-button__ripple"></div>
+        <div class="mdc-button__label">Go home</div>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+    mdc.banner.MDCBanner.attachTo(document.querySelector('#error-banner')).open();
+</script>
